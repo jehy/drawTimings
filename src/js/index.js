@@ -110,11 +110,12 @@ $('#show').click(() => {
   $('textarea[name=timing]').each(function () {
     const graph = $('<div/>');
     const textarea = $(this);
-    const val = $(textarea).val().trim();
-    if (!val)
+    const raw = $(textarea).val().trim();
+    if (!raw)
     {
       return;
     }
+    const val = raw.substr(raw.indexOf('{')).trim();
     const data = JSON.parse(val);
     addTimeLineGraph(graph, data);
     $('#graphs').append(graph);
