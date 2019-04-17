@@ -123,5 +123,5 @@ $('#show').click(() => {
 });
 
 $('#addTextarea').click(()=>{
-  $('#timings').append('<textarea class="form-control" name="timing" style="height: 100px;"></textarea>');
+  $('#timings').append('<textarea class="form-control" name="timing" style="height: 300px;width:800px"></textarea>');
 });
